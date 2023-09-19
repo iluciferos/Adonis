@@ -10,6 +10,7 @@ export default class extends BaseSchema {
       table.enu("gender", ["L", "P"]);
       table.integer("tinggi_badan");
       table.string("hobi");
+      table.integer("umur");
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
        */

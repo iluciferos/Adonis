@@ -10,13 +10,14 @@ export default class PegawaisController {
   }
 
   public async store({request, response}: HttpContextContract) {
-    const {nama, gender, tinggiBadan, hobi} = request.body()
+    const {nama, gender, tinggiBadan, hobi, umur} = request.body()
 
     const pegawai = await Pegawai.create({
         nama,
         gender, 
         tinggiBadan,
-        hobi
+        hobi,
+        umur,
     });
 
     return response.ok({
@@ -28,10 +29,10 @@ export default class PegawaisController {
   public async show({}: HttpContextContract) {}
 
   public async update({request, response, params: {id}}: HttpContextContract) {
-    const {nama, gender, tinggiBadan, hobi} = request.body();
+    const {nama, gender, tinggiBadan, hobi, umur} = request.body();
 
     const pegawai = await Pegawai.query().where({id}).update({
-        nama, gender, tinggiBadan, hobi
+        nama, gender, tinggiBadan, hobi, umur
     })
 
     return response.ok({
