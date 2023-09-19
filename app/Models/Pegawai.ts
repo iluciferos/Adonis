@@ -5,6 +5,16 @@ export default class Pegawai extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
+  @column()
+  public nama: string
+
+  @column()
+  public gender: string
+
+  @column()
+  public tinggiBadan: string
+
+
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 
