@@ -14,6 +14,9 @@ export default class Pegawai extends BaseModel {
   @column()
   public tinggiBadan: string
 
+  @column()
+  public hobi: string
+
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
